@@ -1,4 +1,4 @@
--- Ví dụ thứ nhất
+-- Tạo trigger chèn dữ liệu vào bảng dependents tương ứng với bảng employees
 DROP TRIGGER IF EXISTS employee_insert_audit;
 DELIMITER $$
 CREATE TRIGGER employee_insert_audit
@@ -9,8 +9,7 @@ BEGIN
     VALUES (NEW.employee_id);
 END;
 
--- Ví dụ thứ 2
-DROP TRIGGER IF EXISTS before_insert_employees;
+-- Tạo trigger kiểm tra phòng ban bằng cách đếm hàng department
 DELIMITER $$
 CREATE TRIGGER before_insert_employees
 BEFORE INSERT ON employees
@@ -22,3 +21,4 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Department does not exist';
     END IF;
 END;
+
