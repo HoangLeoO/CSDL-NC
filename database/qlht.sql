@@ -236,15 +236,15 @@ INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_i
 
 -- Stored Procedure
 
-delimiter //
-CREATE PROCEDURE demo ()
-BEGIN
-SELECT region_name , country_name , street_address ,postal_code ,city ,state_province  
-FROM regions as R Left join  countries as C on R.region_id = C.region_id 
-Left join locations as L on c.country_id = L.country_id;
+-- delimiter //
+-- CREATE PROCEDURE demo ()
+-- BEGIN
+-- SELECT region_name , country_name , street_address ,postal_code ,city ,state_province  
+-- FROM regions as R Left join  countries as C on R.region_id = C.region_id 
+-- Left join locations as L on c.country_id = L.country_id;
 
-SELECT * FROM View_Demo;
-END ;
+-- SELECT * FROM View_Demo;
+-- END ;
 
-Call demo ;
+-- Call demo ;
 

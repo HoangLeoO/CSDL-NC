@@ -5,7 +5,7 @@ use qlht;
 -- - Nếu làm trên 6 năm thì thưởng 8 tr
 -- - Nếu làm trên 4 năm thì thưởng 6 tr
 -- - Còn lại thì thưởng 5tr 
-drop procedure pro_Salary ;
+-- drop procedure pro_Salary ;
 delimiter $$
 create procedure pro_Salary ()
 begin
@@ -25,7 +25,7 @@ call pro_Salary();
 --  sau đó hiển thị toàn bộ thông tin của nhân viên đó
 --  trong đó nối họ và tên  Firt_name + late_name = full name 
 
-drop procedure  Pro_Search_name ;
+-- drop procedure  Pro_Search_name ;
 delimiter $$ 
 
 create procedure Pro_Search_name (first_name varchar(30))
